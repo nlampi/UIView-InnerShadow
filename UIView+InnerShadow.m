@@ -23,20 +23,20 @@
 - (void)addInnerShadow {
     UIColor *color = [kDEFAULT_SHADOW_COLOR colorWithAlphaComponent:0.5f];
     
-    [self addInnerShadowWithRadius:3.0f andColor:color inDirection:CSInnerShadowDirectionAll];
+    [self addInnerShadowWithRadius:3.0f andColor:color inDirection:NLInnerShadowDirectionAll];
 }
 
 - (void)addInnerShadowWithRadius:(CGFloat)radius andAlpha:(CGFloat)alpha {
     UIColor *color = [kDEFAULT_SHADOW_COLOR colorWithAlphaComponent:alpha];
     
-    [self addInnerShadowWithRadius:radius andColor:color inDirection:CSInnerShadowDirectionAll];
+    [self addInnerShadowWithRadius:radius andColor:color inDirection:NLInnerShadowDirectionAll];
 }
 
 - (void)addInnerShadowWithRadius:(CGFloat)radius andColor:(UIColor *)color {
-    [self addInnerShadowWithRadius:radius andColor:color inDirection:CSInnerShadowDirectionAll];
+    [self addInnerShadowWithRadius:radius andColor:color inDirection:NLInnerShadowDirectionAll];
 }
 
-- (void)addInnerShadowWithRadius:(CGFloat)radius andColor:(UIColor *)color inDirection:(CSInnerShadowDirection)direction {
+- (void)addInnerShadowWithRadius:(CGFloat)radius andColor:(UIColor *)color inDirection:(NLInnerShadowDirection)direction {
     [self removeInnerShadow];
     
     UIView *shadowView = [self createShadowViewWithRadius:radius andColor:color inDirection:direction];
@@ -44,7 +44,7 @@
     [self addSubview:shadowView];
 }
 
-- (UIView *)createShadowViewWithRadius:(CGFloat)radius andColor:(UIColor *)color inDirection:(CSInnerShadowDirection)direction {
+- (UIView *)createShadowViewWithRadius:(CGFloat)radius andColor:(UIColor *)color inDirection:(NLInnerShadowDirection)direction {
     UIView *shadowView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
     shadowView.backgroundColor = [UIColor clearColor];
     shadowView.tag = kInnerShadowViewTag;
@@ -52,11 +52,11 @@
     CAGradientLayer *shadow;
     NSArray *colorsArray = @[(id)[color CGColor], (id)[[UIColor clearColor] CGColor]];
 
-    if(direction & CSInnerShadowDirectionTop) {
+    if(direction & NLInnerShadowDirectionTop) {
         CGFloat xOffset = 0.0f;
         CGFloat topWidth = self.bounds.size.width;
         
-        if(direction & CSInnerShadowDirectionLeft) {
+        if(direction & NLInnerShadowDirectionLeft) {
             xOffset += radius;
             topWidth -= radius;
             
@@ -68,7 +68,7 @@
             [shadowView.layer insertSublayer:shadow atIndex:0];
         }
         
-        if(direction & CSInnerShadowDirectionRight) {
+        if(direction & NLInnerShadowDirectionRight) {
             topWidth -= radius;
             
             shadow = [CAGradientLayer layer];
@@ -87,11 +87,11 @@
         [shadowView.layer insertSublayer:shadow atIndex:0];
     }
 
-    if(direction & CSInnerShadowDirectionBottom) {
+    if(direction & NLInnerShadowDirectionBottom) {
         CGFloat xOffset = 0.0f;
         CGFloat bottomWidth = self.bounds.size.width;
         
-        if(direction & CSInnerShadowDirectionLeft) {
+        if(direction & NLInnerShadowDirectionLeft) {
             xOffset += radius;
             bottomWidth -= radius;
             
@@ -103,7 +103,7 @@
             [shadowView.layer insertSublayer:shadow atIndex:0];
         }
         
-        if(direction & CSInnerShadowDirectionRight) {
+        if(direction & NLInnerShadowDirectionRight) {
             bottomWidth -= radius;
             
             shadow = [CAGradientLayer layer];
@@ -122,16 +122,16 @@
         [shadowView.layer insertSublayer:shadow atIndex:0];
     }
     
-    if(direction & CSInnerShadowDirectionLeft) {
+    if(direction & NLInnerShadowDirectionLeft) {
         CGFloat yOffset = 0.0f;
         CGFloat leftHeight = self.bounds.size.height;
         
-        if(direction & CSInnerShadowDirectionTop) {
+        if(direction & NLInnerShadowDirectionTop) {
             yOffset += radius;
             leftHeight -= radius;
         }
         
-        if(direction & CSInnerShadowDirectionBottom) {
+        if(direction & NLInnerShadowDirectionBottom) {
             leftHeight -= radius;
         }
         
@@ -143,16 +143,16 @@
         [shadowView.layer insertSublayer:shadow atIndex:0];
     }
 
-    if(direction & CSInnerShadowDirectionRight) {
+    if(direction & NLInnerShadowDirectionRight) {
         CGFloat yOffset = 0.0f;
         CGFloat rightHeight = self.bounds.size.height;
         
-        if(direction & CSInnerShadowDirectionTop) {
+        if(direction & NLInnerShadowDirectionTop) {
             yOffset += radius;
             rightHeight -= radius;
         }
         
-        if(direction & CSInnerShadowDirectionBottom) {
+        if(direction & NLInnerShadowDirectionBottom) {
             rightHeight -= radius;
         }
         

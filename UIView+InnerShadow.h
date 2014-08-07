@@ -4,13 +4,13 @@
 //  Created by Nathan Lampi on 7/31/14.
 //
 
-typedef NS_OPTIONS(NSUInteger, CSInnerShadowDirection) {
-    CSInnerShadowDirectionNone   = 0,
-    CSInnerShadowDirectionLeft   = (1 << 0),
-    CSInnerShadowDirectionRight  = (1 << 1),
-    CSInnerShadowDirectionTop    = (1 << 2),
-    CSInnerShadowDirectionBottom = (1 << 3),
-    CSInnerShadowDirectionAll    = 15
+typedef NS_OPTIONS(NSUInteger, NLInnerShadowDirection) {
+    NLInnerShadowDirectionNone   = 0,
+    NLInnerShadowDirectionLeft   = (1 << 0),
+    NLInnerShadowDirectionRight  = (1 << 1),
+    NLInnerShadowDirectionTop    = (1 << 2),
+    NLInnerShadowDirectionBottom = (1 << 3),
+    NLInnerShadowDirectionAll    = 15
 };
 
 @interface UIView (Shadow)
@@ -42,7 +42,7 @@ typedef NS_OPTIONS(NSUInteger, CSInnerShadowDirection) {
  * @param color         : The color to use for the shadow.
  * @param direction     : The view edges to draw the shadow on.
  */
-- (void)addInnerShadowWithRadius:(CGFloat)radius andColor:(UIColor *)color inDirection:(CSInnerShadowDirection)direction;
+- (void)addInnerShadowWithRadius:(CGFloat)radius andColor:(UIColor *)color inDirection:(NLInnerShadowDirection)direction;
 
 /**
  * Remove any Inner shadow from view.
