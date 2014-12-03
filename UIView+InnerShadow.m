@@ -56,28 +56,28 @@
         CGFloat xOffset = 0.0f;
         CGFloat topWidth = self.bounds.size.width;
         
-        if(direction & NLInnerShadowDirectionLeft) {
-            xOffset += radius;
-            topWidth -= radius;
-            
-            shadow = [CAGradientLayer layer];
-            shadow.colors = colorsArray;
-            shadow.startPoint = CGPointMake(0.0, 0.0);
-            shadow.endPoint = CGPointMake(1.0, 1.0);
-            shadow.frame = CGRectMake(self.layer.borderWidth, self.layer.borderWidth, radius - self.layer.borderWidth, radius - self.layer.borderWidth);
-            [shadowView.layer insertSublayer:shadow atIndex:0];
-        }
+//        if(direction & NLInnerShadowDirectionLeft) {
+//            xOffset += radius;
+//            topWidth -= radius;
+//
+//            shadow = [CAGradientLayer layer];
+//            shadow.colors = colorsArray;
+//            shadow.startPoint = CGPointMake(0.0, 0.0);
+//            shadow.endPoint = CGPointMake(1.0, 1.0);
+//            shadow.frame = CGRectMake(self.layer.borderWidth, self.layer.borderWidth, radius - self.layer.borderWidth, radius - self.layer.borderWidth);
+//            [shadowView.layer insertSublayer:shadow atIndex:0];
+//        }
         
-        if(direction & NLInnerShadowDirectionRight) {
-            topWidth -= radius;
-            
-            shadow = [CAGradientLayer layer];
-            shadow.colors = colorsArray;
-            shadow.startPoint = CGPointMake(1.0, 0.0);
-            shadow.endPoint = CGPointMake(0.0, 1.0);
-            shadow.frame = CGRectMake(self.bounds.size.width - radius, self.layer.borderWidth, radius - self.layer.borderWidth, radius - self.layer.borderWidth);
-            [shadowView.layer insertSublayer:shadow atIndex:0];
-        }
+//        if(direction & NLInnerShadowDirectionRight) {
+//            topWidth -= radius;
+//
+//            shadow = [CAGradientLayer layer];
+//            shadow.colors = colorsArray;
+//            shadow.startPoint = CGPointMake(1.0, 0.0);
+//            shadow.endPoint = CGPointMake(0.0, 1.0);
+//            shadow.frame = CGRectMake(self.bounds.size.width - radius, self.layer.borderWidth, radius - self.layer.borderWidth, radius - self.layer.borderWidth);
+//            [shadowView.layer insertSublayer:shadow atIndex:0];
+//        }
         
         shadow = [CAGradientLayer layer];
         shadow.colors = colorsArray;
@@ -91,28 +91,28 @@
         CGFloat xOffset = 0.0f;
         CGFloat bottomWidth = self.bounds.size.width;
         
-        if(direction & NLInnerShadowDirectionLeft) {
-            xOffset += radius;
-            bottomWidth -= radius;
-            
-            shadow = [CAGradientLayer layer];
-            shadow.colors = colorsArray;
-            shadow.startPoint = CGPointMake(0.0, 1.0);
-            shadow.endPoint = CGPointMake(1.0, 0.0);
-            shadow.frame = CGRectMake(self.layer.borderWidth, self.bounds.size.height - radius, radius - self.layer.borderWidth, radius - self.layer.borderWidth);
-            [shadowView.layer insertSublayer:shadow atIndex:0];
-        }
+//        if(direction & NLInnerShadowDirectionLeft) {
+//            xOffset += radius;
+//            bottomWidth -= radius;
+//            
+//            shadow = [CAGradientLayer layer];
+//            shadow.colors = colorsArray;
+//            shadow.startPoint = CGPointMake(0.0, 1.0);
+//            shadow.endPoint = CGPointMake(1.0, 0.0);
+//            shadow.frame = CGRectMake(self.layer.borderWidth, self.bounds.size.height - radius, radius - self.layer.borderWidth, radius - self.layer.borderWidth);
+//            [shadowView.layer insertSublayer:shadow atIndex:0];
+//        }
         
-        if(direction & NLInnerShadowDirectionRight) {
-            bottomWidth -= radius;
-            
-            shadow = [CAGradientLayer layer];
-            shadow.colors = colorsArray;
-            shadow.startPoint = CGPointMake(1.0, 1.0);
-            shadow.endPoint = CGPointMake(0.0, 0.0);
-            shadow.frame = CGRectMake(self.bounds.size.width - radius, self.bounds.size.height - radius, radius - self.layer.borderWidth, radius - self.layer.borderWidth);
-            [shadowView.layer insertSublayer:shadow atIndex:0];
-        }
+//        if(direction & NLInnerShadowDirectionRight) {
+//            bottomWidth -= radius;
+//
+//            shadow = [CAGradientLayer layer];
+//            shadow.colors = colorsArray;
+//            shadow.startPoint = CGPointMake(1.0, 1.0);
+//            shadow.endPoint = CGPointMake(0.0, 0.0);
+//            shadow.frame = CGRectMake(self.bounds.size.width - radius, self.bounds.size.height - radius, radius - self.layer.borderWidth, radius - self.layer.borderWidth);
+//            [shadowView.layer insertSublayer:shadow atIndex:0];
+//        }
 
         shadow = [CAGradientLayer layer];
         shadow.colors = colorsArray;
@@ -126,14 +126,14 @@
         CGFloat yOffset = 0.0f;
         CGFloat leftHeight = self.bounds.size.height;
         
-        if(direction & NLInnerShadowDirectionTop) {
-            yOffset += radius;
-            leftHeight -= radius;
-        }
+//        if(direction & NLInnerShadowDirectionTop) {
+//            yOffset += radius;
+//            leftHeight -= radius;
+//        }
         
-        if(direction & NLInnerShadowDirectionBottom) {
-            leftHeight -= radius;
-        }
+//        if(direction & NLInnerShadowDirectionBottom) {
+//            leftHeight -= radius;
+//        }
         
         shadow = [CAGradientLayer layer];
         shadow.colors = colorsArray;
@@ -147,14 +147,14 @@
         CGFloat yOffset = 0.0f;
         CGFloat rightHeight = self.bounds.size.height;
         
-        if(direction & NLInnerShadowDirectionTop) {
-            yOffset += radius;
-            rightHeight -= radius;
-        }
+//        if(direction & NLInnerShadowDirectionTop) {
+//            yOffset += radius;
+//            rightHeight -= radius;
+//        }
         
-        if(direction & NLInnerShadowDirectionBottom) {
-            rightHeight -= radius;
-        }
+//        if(direction & NLInnerShadowDirectionBottom) {
+//            rightHeight -= radius;
+//        }
         
         shadow = [CAGradientLayer layer];
         shadow.colors = colorsArray;

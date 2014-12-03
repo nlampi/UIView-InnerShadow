@@ -4,6 +4,8 @@
 //  Created by Nathan Lampi on 7/31/14.
 //
 
+#import <UIKit/UIKit.h>
+
 typedef NS_OPTIONS(NSUInteger, NLInnerShadowDirection) {
     NLInnerShadowDirectionNone   = 0,
     NLInnerShadowDirectionLeft   = (1 << 0),
